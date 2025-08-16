@@ -26,13 +26,13 @@ export const getGenreDetail = async (req: Request, res: Response) => {
     const genre = await Genre.findById(id);
     return res.json({
       data: genre,
-      message: 'Success get data',
+      message: 'Success get single data',
       status: 'success',
     });
   } catch (error) {
     console.log(error);
     return res.status(500).json({
-      massage: 'Failed to get data',
+      massage: 'Failed to get single data',
       data: null,
       status: 'failed',
     });
