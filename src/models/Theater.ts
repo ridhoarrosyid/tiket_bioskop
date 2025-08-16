@@ -4,11 +4,11 @@ const theaterSchema = new Schema(
   {
     name: {
       type: String,
-      require: true,
+      required: true,
     },
     city: {
       type: String,
-      require: true,
+      required: true,
     },
   },
   { timestamps: true }
