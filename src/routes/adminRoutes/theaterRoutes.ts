@@ -5,7 +5,7 @@ import {
   getTheaters,
   postTheater,
   putTheater,
-} from '../../controllers/teaterController';
+} from '../../controllers/theaterController';
 import { validateRequest } from '../../middlewares/validateRequest';
 import { theaterSchema } from '../../utils/zodSchema';
 
