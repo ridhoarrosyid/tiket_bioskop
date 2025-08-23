@@ -2,7 +2,7 @@ import { model, Schema } from 'mongoose';
 
 const transactionSchema = new Schema(
   {
-    subTotal: { type: Number, required: true, default: 0 },
+    subtotal: { type: Number, required: true, default: 0 },
     total: { type: Number, required: true, default: 0 },
     bookingFee: { type: Number, required: true, default: 0 },
     tax: { type: Number, required: true, default: 0 },
@@ -19,6 +19,7 @@ const transactionSchema = new Schema(
       ref: 'Theater',
     },
     date: { type: String, required: true },
+    seats: [{ type: Schema.Types.ObjectId, ref: 'TransactionSeat' }],
   },
   { timestamps: true }
 );

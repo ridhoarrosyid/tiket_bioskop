@@ -33,3 +33,20 @@ export const authSchema = z.object({
   password: z.string().min(5),
   role: z.enum(['admin', 'customer']),
 });
+
+export const topupSchema = z.object({
+  balance: z.number().min(1000),
+});
+
+export const transactionSchema = z
+  .object({
+    subtotal: z.number(),
+    total: z.number(),
+    bookingFee: z.number(),
+    tax: z.number(),
+    movieId: z.string(),
+    theaterId: z.string(),
+    seats: z.array(z.string()),
+    date: z.string(),
+  })
+  .strict();
