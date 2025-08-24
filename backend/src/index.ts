@@ -5,6 +5,7 @@ import adminRoutes from './routes/adminRoutes';
 import bodyParser from 'body-parser';
 import authRoutes from './routes/authRoutes';
 import customerRoutes from './routes/customerRoutes';
+import cors from 'cors';
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ const app: Express = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(cors());
 
 connectDB();
 
